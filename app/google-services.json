@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "784751993800",
+    "firebase_url": "https://stores2-3a988.firebaseio.com",
+    "project_id": "stores2-3a988",
+    "storage_bucket": "stores2-3a988.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784751993800:android:0b734ff700850d0f",
+        "android_client_info": {
+          "package_name": "me.dvit.stores"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "784751993800-2gnr75qrmof959vtf1sdfk3eslc4fgi1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwRvsTluR9R56-_Mruz92VVcodlJ856vA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
