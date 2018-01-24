@@ -82,21 +82,34 @@
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/white"
                 />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:paddingBottom="20dp"
-                android:paddingLeft="75dp"
-                android:paddingRight="75dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
                 android:paddingTop="20dp"
                 android:layout_marginTop="15dp"
                 android:text="@string/login"
                 android:textColor="@android:color/white"
                 android:onClick="login"
-                android:background="@drawable/buttonbackground"/>
+                android:background="@drawable/buttonbackground"
+                android:id="@+id/button2" />
 
+                <CheckBox
+                    android:id="@+id/ch_rememberme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+android:textColor="@color/white"               android:layout_toEndOf="@+id/button2"
+                    android:layout_toRightOf="@+id/button2"
+                    android:text="@string/remember"/>
+            </RelativeLayout>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
