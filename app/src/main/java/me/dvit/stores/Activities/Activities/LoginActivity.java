@@ -1,12 +1,16 @@
 package me.dvit.stores.Activities.Activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -30,18 +34,33 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseAuth auth;
     ProgressBar progressBar;
 String password1 , email1;
+    private CheckBox saveLoginCheckBox;
+    private SharedPreferences loginPreferences;
+    private SharedPreferences.Editor loginPrefsEditor;
+    private Boolean saveLogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-    }
-
-    public void login(View view) {
         textView = (TextView) findViewById(R.id.textview);
         password= (EditText)findViewById(R.id.password);
         email = (EditText)findViewById(R.id.user_mail);
         progressBar = (ProgressBar)findViewById(R.id.progressBar);
-            auth = FirebaseAuth.getInstance();
+        auth = FirebaseAuth.getInstance();
+        saveLoginCheckBox = (CheckBox)findViewById(R.id.ch_rememberme);
+        loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
+        loginPrefsEditor = loginPreferences.edit();
+        saveLogin = loginPreferences.getBoolean("saveLogin", false);
+        if (saveLogin == true) {
+            email.setText(loginPreferences.getString("email", ""));
+           password.setText(loginPreferences.getString("password", ""));
+            saveLoginCheckBox.setChecked(true);
+        }
+
+    }
+
+    public void login(View view) {
+
             password1=password.getText().toString().trim();
             email1=email.getText().toString().trim();
             if (TextUtils.isEmpty(email1)) {
@@ -77,6 +96,19 @@ String password1 , email1;
                                 startActivity(intent);
                                 finish();
                             }
+                            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                            imm.hideSoftInputFromWindow(email.getWindowToken(), 0);
+
+                            if (saveLoginCheckBox.isChecked()) {
+                                loginPrefsEditor.putBoolean("saveLogin", true);
+                                loginPrefsEditor.putString("email", email1);
+                                loginPrefsEditor.putString("password", password1);
+                                loginPrefsEditor.commit();
+                            } else {
+                                loginPrefsEditor.clear();
+                                loginPrefsEditor.commit();
+                            }
+
                         }
                     });
         }
