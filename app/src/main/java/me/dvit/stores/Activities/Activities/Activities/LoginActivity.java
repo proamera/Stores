@@ -1,4 +1,4 @@
-package me.dvit.stores.Activities.Activities;
+package me.dvit.stores.Activities.Activities.Activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -21,9 +21,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import me.dvit.stores.R;
 

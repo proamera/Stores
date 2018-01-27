@@ -13,12 +13,25 @@
     <string name="new_pass">New Password</string>
     <string name="title_activity_profile">Firebase</string>
     <string name="title_activity_login">Sign in</string>
-
     <string name="title_activity_home">HomeActivity</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_settings">Settings</string>
+    <string-array name="categories">
+        <item>Meats</item>
+        <item>Vegtables</item>
+        <item>Fruits</item>
+        <item>snakes</item>
+        <item>Dranks</item>
+    </string-array>
+    <string-array name="shops">
+        <item>Karfor</item>
+        <item>A to Z</item>
+        <item>Maka</item>
+        <item>Menshawi</item>
+
+    </string-array>
+
 </resources>
+
 

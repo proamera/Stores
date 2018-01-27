@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.Activities.MainActivity">
+        <activity android:name=".Activities.Activities.Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,12 +19,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activities.Activities.HomeActivity"
+            android:name=".Activities.Activities.Activities.HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activities.Activities.LoginActivity" />
-        <activity android:name=".Activities.Activities.SignupActivity" />
-        <activity android:name=".Activities.Activities.ForgetPasswordActivity"></activity>
+        <activity android:name=".Activities.Activities.Activities.LoginActivity" />
+        <activity android:name=".Activities.Activities.Activities.SignupActivity" />
+        <activity android:name=".Activities.Activities.Activities.ForgetPasswordActivity"></activity>
     </application>
 
 </manifest>

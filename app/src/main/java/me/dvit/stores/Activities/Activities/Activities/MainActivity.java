@@ -1,4 +1,4 @@
-package me.dvit.stores.Activities.Activities;
+package me.dvit.stores.Activities.Activities.Activities;
 
 import android.content.Intent;
 import android.os.Handler;
