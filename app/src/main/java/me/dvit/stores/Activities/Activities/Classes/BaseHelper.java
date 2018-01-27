@@ -22,7 +22,7 @@ public class BaseHelper extends SQLiteOpenHelper {
     public static final String ITEM_COL_7 = "NOTES";
     public static final String SHOPS_TABLE_NAME = "shops_table";
     public static final String SHOP_COL_1 = "ID";
-    public static final String SHOP_COL_2 = "LOCATION";
+    public static final String SHOP_COL_2 = "LOCATION";    
     public static final String USERS_TABLE_NAME = "shops_table";
     public static final String USER_COL_1 = "ID";
     public static final String USER_COL_2 = "EMAIL";
